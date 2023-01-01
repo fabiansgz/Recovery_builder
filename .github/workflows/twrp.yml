@@ -51,7 +51,7 @@ jobs:
              cd work
              repo init -u $MANIFEST -b $BRANCH --depth=1              
              repo sync -c -j700 --force-sync --no-clone-bundle --no-tags
-             git clone $DT_LINK --depth=1 --single-branch device/$MANUFACTURER/$DEVICE          
+             git clone $DT_LINK --depth=1 --single-branch --branch $BRANCH $DT_LINK          
              
        - name: Build twrp
          run: |
